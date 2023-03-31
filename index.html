@@ -1,51 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Notifications page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Notifications page</title>
 
-  Notifications 3
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="notifications-wrapper">
+      <header>
+        <h2>Notifications <span class="counter">3</span></h2>
+        <button>Mark all as read</button>
+      </header>
 
-  Mark all as read
+      <div class="notifications">
+        <div class="notification active">
+          <a href="#">
+            <img src="./assets/images/avatar-mark-webber.webp" alt="mark-webber-avatar" class="profile-picture" />
+          </a>
 
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
+          <div class="message-wrapper">
+            <div class="description">
+              <a href="#" class="username">Mark Webber</a>
+              <span class="action">reacted to your recent post</span>
+              <a href="#" class="link">My first tournament today!</a>
+              <div class="dot"></div>
+            </div>
 
-  Angela Gray followed you
-  5m ago
+            <div class="date">1m ago</div>
+          </div>
+        </div>
 
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
+        <div class="notification active">
+          <a href="#">
+            <img src="./assets/images/avatar-angela-gray.webp" alt="angela-gray-avatar" class="profile-picture" />
+          </a>
 
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
+          <div class="message-wrapper">
+            <div class="description">
+              <a href="#" class="username">Angela Gray</a>
+              <span class="action">followed you</span>
+              <div class="dot"></div>
+            </div>
 
-  Kimberly Smith commented on your picture
-  1 week ago
+            <div class="date">5m ago</div>
+          </div>
+        </div>
 
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
+        <div class="notification active">
+          <a href="#">
+            <img src="./assets/images/avatar-jacob-thompson.webp" alt="jacob-thompson-avatar" class="profile-picture" />
+          </a>
 
-  Anna Kim left the group Chess Club
-  2 weeks ago
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <div class="message-wrapper">
+            <div class="description">
+              <a href="#" class="username">Jacob Thompson</a>
+              <span class="action">has joined your group</span>
+              <a href="#" class="link group">Chess Club</a>
+              <div class="dot"></div>
+            </div>
+
+            <div class="date">1 day ago</div>
+          </div>
+        </div>
+
+        <div class="notification">
+          <a href="#">
+            <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="rizky-hasanuddin-avatar" class="profile-picture" />
+          </a>
+
+          <div class="message-wrapper">
+            <div class="description">
+              <a href="#" class="username">Rizky Hasanuddin</a>
+              <span class="action">sent you a private message</span>
+              <div class="dot"></div>
+            </div>
+
+            <div class="date">5 days ago</div>
+
+            <div class="message">
+              Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
+            </div>
+          </div>
+        </div>
+
+        <div class="notification">
+          <a href="#">
+            <img src="./assets/images/avatar-kimberly-smith.webp" alt="kimberly-smith-avatar" class="profile-picture" />
+          </a>
+
+          <div class="message-wrapper">
+            <div class="description with-picture">
+              <a href="#" class="username">Kimberly Smith</a>
+              <span class="action">commented on your picture</span>
+              <a href="#">
+                <img src="./assets/images/image-chess.webp" alt="chess-image" class="picture" />
+              </a>
+              <div class="dot"></div>
+            </div>
+
+            <div class="date">1 week ago</div>
+          </div>
+        </div>
+
+        <div class="notification">
+          <a href="#">
+            <img src="./assets/images/avatar-nathan-peterson.webp" alt="nathan-peterson-avatar" class="profile-picture" />
+          </a>
+
+          <div class="message-wrapper">
+            <div class="description">
+              <a href="#" class="username">Nathan Peterson</a>
+              <span class="action">reacted to your recent post</span>
+              <a href="#" class="link">5 end-game strategies to increase your win rate</a>
+              <div class="dot"></div>
+            </div>
+
+            <div class="date">2 weeks ago</div>
+          </div>
+        </div>
+
+        <div class="notification">
+          <a href="#">
+            <img src="./assets/images/avatar-anna-kim.webp" alt="anna-kim-avatar" class="profile-picture" />
+          </a>
+
+          <div class="message-wrapper">
+            <div class="description">
+              <a href="#" class="username">Anna Kim</a>
+              <span class="action">left the group</span>
+              <a href="#" class="link group">Chess Club</a>
+              <div class="dot"></div>
+            </div>
+
+            <div class="date">2 weeks ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Pasek108">Artur Pas</a>.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

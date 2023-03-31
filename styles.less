@@ -1,23 +1,194 @@
 @font-face {
-    font-family: PlusJakartaSans;
-    src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+  font-family: PlusJakartaSans;
+  src: url(./assets/fonts/static/PlusJakartaSans-Medium.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: PlusJakartaSans;
+  src: url(./assets/fonts/static/PlusJakartaSans-ExtraBold.ttf);
+  font-weight: bold;
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: Plus Jakarta Sans;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: PlusJakartaSans;
+  font-size: 16px;
+  background: none;
 }
 
 body {
-    
+  .flex(column);
+  background: hsl(212, 68%, 96%);
+  color: hsl(224, 21%, 14%);
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+a {
+  color: inherit;
+  font-weight: 800;
+  text-decoration: none;
+
+  &:hover {
+    color: hsl(219, 85%, 26%) !important;
+  }
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+h2 {
+  font-size: 2rem;
+}
+
+.flex(@direction: row, @align: center, @justify: center) {
+  display: flex;
+  flex-direction: @direction;
+  align-items: @align;
+  justify-content: @justify;
+}
+
+/* --------------------- notifications wrapper --------------------- */
+.notifications-wrapper {
+  .flex(column, flex-start, flex-start);
+  width: 45rem;
+  padding: 2rem;
+  margin: 3rem 0;
+  border-radius: 1rem;
+  background: white;
+
+  header {
+    .flex(row, center, space-between);
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .counter {
+      position: absolute;
+      padding: 0.25rem 0.75rem;
+      margin: 0.5rem 0 0.5rem 0.75rem;
+      border-radius: 0.25rem;
+      background: hsl(219, 85%, 26%);
+      color: hsl(210, 60%, 98%);
+    }
+
+    button {
+      color: hsl(219, 12%, 42%);
+      cursor: pointer;
+
+      &:hover {
+        color: hsl(219, 85%, 26%);
+      }
+    }
+  }
+}
+
+/* --------------------- notification --------------------- */
+.notification {
+  .flex(row, flex-start, flex-start);
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+
+  &.active {
+    background: hsl(212, 68%, 96%);
+
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-left: 0.25rem;
+      border-radius: 9999rem;
+      background-color: hsl(1, 90%, 64%);
+    }
+  }
+
+  img {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+  }
+
+  .message-wrapper {
+    .flex(column, flex-start, flex-start);
+    width: 100%;
+    margin-left: 1rem;
+  }
+
+  .description {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0.5rem;
+
+    &.with-picture {
+      padding-right: 4rem;
+
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .username, .action {
+    margin-right: 0.1rem;
+  }
+
+  .link, .action {
+    color: hsl(219, 12%, 42%);
+  }
+
+  .link.group {
+    color: hsl(219, 85%, 26%);
+  }
+
+  .date {
+    color: hsl(219, 14%, 63%);
+  }
+
+  .message {
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid hsl(205, 33%, 90%);
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+    &:hover {
+      background: hsl(211, 68%, 94%);
+    }
+  }
+}
+
+/* --------------------- footer --------------------- */
+.attribution {
+  padding: 0.25rem;
+  font-size: 14px;
+  text-align: center;
+
+  a {
+    font-size: 14px;
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  * {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .notifications-wrapper {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 0;
+
+    header .counter {
+      margin: 0;
+      margin-left: 0.75rem;
+    }
+  }
 }
