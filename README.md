@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/Pasek108/NotificationsPage/](https://github.com/Pasek108/NotificationsPage/)
-- Live Site URL: [https://pasek108.github.io/NotificationsPage/](https://pasek108.github.io/NotificationsPage/)
+- Solution URL: [https://github.com/Pasek108/FM-NotificationsPage/](https://github.com/Pasek108/FM-NotificationsPage/)
+- Live Site URL: [https://pasek108.github.io/FM-NotificationsPage/](https://pasek108.github.io/FM-NotificationsPage/)
 
 ### Built with
 
